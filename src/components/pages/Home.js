@@ -11,6 +11,8 @@ const Home = () => {
         if (!user) {
             loadUser()
         }
+
+        // eslint-disable-next-line
     }, [])
 
     return (

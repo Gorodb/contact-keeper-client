@@ -14,6 +14,8 @@ const ContactForm = () => {
 
     useEffect(() => {
         current ? setContact(current) : setContact(emptyContact)
+
+        // eslint-disable-next-line
     }, [current])
 
     const [contact, setContact] = useState(emptyContact)

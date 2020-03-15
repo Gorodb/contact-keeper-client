@@ -20,6 +20,8 @@ const Login = (props) => {
             setAlert(error, 'danger')
             clearErrors()
         }
+
+        // eslint-disable-next-line
     }, [error, isAuthenticated, props.history])
 
     const { email, password } = user

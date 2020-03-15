@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import PropTypes from 'prop-types'
 import authContext from "../../context/auth/authContext"
 import contactContext from "../../context/contact/contactContext"
+import classes from './Navbar.module.css'
 
 const Navbar = ({ title, icon }) => {
     const { isAuthenticated, logoutUser, user } = useContext(authContext)
@@ -21,9 +22,9 @@ const Navbar = ({ title, icon }) => {
                     <Link to={'/about'}>О приложении</Link>
                 </li>
                 <li>
-                    <a onClick={onLogout} href="#">
-                        <i className="fas fa-sign-out-alt" /> <span className="hide-sm">Выход</span>
-                    </a>
+                    <span onClick={onLogout} className={classes.pointer}>
+                        <i className="fas fa-sign-out-alt" /><span className="hide-sm">Выход</span>
+                    </span>
                 </li>
             </ul>
         </Fragment>
